@@ -5,13 +5,23 @@ date: "`r format(Sys.time(), '%d %b %Y')`"
 output:
   pagedown::html_resume:
     css: 
-    - css/override.css
+    - css/styles.css
     - resume         
     # set it to true for a self-contained HTML page but it'll take longer to render
     self_contained: false
 # uncomment this line to produce HTML and PDF in RStudio:
 knit: pagedown::chrome_print
 ---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+library(tidyverse)
+library(glue)
+source('functions.r') 
+```
 
 Aside
 ================================================================================
@@ -29,17 +39,45 @@ Kontakt {#contact}
 Sprachkenntnisse {#skills}
 --------------------------------------------------------------------------------
 
-Italienisch (Muttersprache); Deutsch (Fließend in Wort und Schrift); Englisch (Fließend in Wort und Schrift); Spanisch (Grundkenntnisse)
+```{r}
+
+language_skils <- tribble(
+  ~skill,               ~level,
+  "Italienisch",              5,
+  "Englisch",              4,
+  "Deutsch",               4,
+  "Spanisch",              1.5, 
+)
+
+build_skill_bars(skills = language_skils)
+
+```
 
 IT Kenntnisse
 --------------------------------------------------------------------------------
 
-R, RStudio, Git, GitHub, Latex, Excel, Word, PowerPoint, Stata, SQL
+```{r}
+
+skills_data <- tribble(
+  ~skill,               ~level,
+  "R/RStudio",          4.5,
+  "Excel",              3.5,
+  "Git/GitHub",         3,
+  "Stata",              2, 
+  "SQL",                1
+)
+
+build_skill_bars(skills = skills_data)
+```
 
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Letzte Aktualisierung `r format(Sys.time(), '%d %m %Y')`. Erstellt mit [pagedown](https://github.com/rstudio/pagedown).
+Erstellt mit [pagedown](https://github.com/rstudio/pagedown).
+
+Quellcode: [github.com/Alessandro1984/cv](https://github.com/Alessandro1984/cv).
+
+Letzte Aktualisierung `r format(Sys.time(), '%d %m %Y')`. 
 
 Main
 ================================================================================
@@ -55,7 +93,7 @@ Geburtsdatum, Ort: 03.11.1984, Ancona (Italien) <br>
 Staatsangehörigkeit: italienisch <br>
 Familienstand: verheiratet, ein Kind
 
-Berufserfahrungen {data-icon=suitcase}
+Beruflicher Werdegang {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
 ### wissenschaftlicher Mitarbeiter
@@ -74,7 +112,7 @@ Mitarbeiter im Projekt [„WIPOSIM - Der wirtschaftspolitische Online-Simulator�
 - Programmierung von Simulationen in R 
 - Entwicklung interaktiver Anwendungen mit dem R-Paket *Shiny*
 - Konzeption und Verfassung von Lehrtexten für die Simulationen insbesondere zum Thema der Fiskalpolitk
-- Umfangreiche Erfahrung in der Datenarbeit anhand der *R tidyverse* Pakete
+- Umfangreiche Erfahrung in der Datenarbeit anhand der *tidyverse* R-Pakete
 - Veröffentlichung wissenschaftlichen Artikeln in akademischen Fachzeitschriften
 - Antragstellung, Einwerbung von Drittmitteln
 :::
@@ -85,7 +123,7 @@ Hochschule für Wirtschaft und Recht (HWR)
 
 Berlin
 
-Oktober 2017 - Mai 2019
+Oktober 2017 - April 2019
 
 ---
 
@@ -98,6 +136,7 @@ Mitarbeiter im Projekt [„Modelltheoretische Grundlagen wirtschaftspolitischer 
 - Übersetzung vom Buch und Simulationen vom Deutschen ins Englische
 - Vorstellung der Projektergebnisse auf wissenschaftlichen Panels und Messen
 :::
+
 
 Lehrerfahrung {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
@@ -112,8 +151,12 @@ Berlin
 
 ---
 
-- Einführungskurse in die Wirtschaftswissenschaften (Makroökonomie, Internationale Ökonomie)
-- Einführung in die quantitativen Methoden (insbesondere Ökonometrie)
+- Business Economics (WiSe 2017-18)
+- Economics Tutorium (WiSe 2016-17), als Tutor
+- International Economics (SoSe 2016, SoSe 2018)
+- Macroeconomics: The Economic Cycle and Employment (SoSe 2016, WiSe 2016-17, SoSe 2017, SoSe 2018, WiSe 2018-19, SoSe 2019)
+- Quantitative Methods for Economists (WiSe 2017-18, WiSe 2018-19, WiSe 2019-20, WiSe 2020-21, WiSe 2021-22)
+- Research Methods Seminar (WiSe 2019-20)
 
 Studium {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
@@ -142,14 +185,6 @@ Urbino, Italien
 
 2010
 
-### Universitat Pompeu Fabra (UPF)
-
-Auslandssemester
-
-Barcelona, Spanien
-
-2007
-
 ### Universität Urbino
 
 B.A. in Philosophie
@@ -158,35 +193,38 @@ Urbino, Italien
 
 2007
 
-Weiterbildung {data-icon=laptop}
+Ausgewählte Publikationen {data-icon=newspaper}
 --------------------------------------------------------------------------------
 
-### Technische Universität (TU)
+### Varieties and interdependencies of demand and growth regimes in finance-dominated capitalism: a Post-Keynesian two-country stock–flow consistent simulation approach
 
-Weitere Kurse:
+Prante, F., Hein, E. und Bramucci, A.
 
-Berlin
+N/A
 
-2017 - 2019
+2022
 
-- Introduction to Engineering Data Analytics with R
-- Applied Data Science for Quality Engineering
-- LaTeX: Einführung in das mathematisch wissenschaftliche Textsatzsystem
+*Review of Keynesian Economics*, 10(2), 264–290, [https://doi.org/10.4337/roke.2022.02.07](https://doi.org/10.4337/roke.2022.02.07)
 
-### Hochschule für Wirtschaft und Recht (HWR)
+### Pluralist macroeconomics - an interactive simulator
 
-Zusätzlicher Kurs:
+Prante, F., Bramucci, A., Hein, E. und Truger, A.
 
-Berlin
+N/A
 
-2016
+2020
 
-- Introduction to Programming in R
+*International Journal of Pluralism and Economics Education*, 11(1), 55-78, [https://www.doi.org/10.1504/IJPEE.2020.109496](https://www.doi.org/10.1504/IJPEE.2020.109496)
 
-Hobbys {data-icon="fas fa-dumbbell"}
---------------------------------------------------------------------------------
+### Decades of tight fiscal policy have left the health care system in Italy ill-prepared to fight the COVID-19 outbreak
 
-Meine Hobbys sind Sport und Musik vor allem CrossFit, Boxen und Schlagzeug spielen
+Prante, F., Bramucci, A. und Truger, A.
+
+N/A
+
+2020
+
+*Intereconomics*, 55, 147–152, [https://doi.org/10.1007/s10272-020-0886-0](https://doi.org/10.1007/s10272-020-0886-0)
 
 ```{js move_disclaim, echo=FALSE}
 (function() {
