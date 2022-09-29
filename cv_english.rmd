@@ -1,17 +1,27 @@
 ---
 title: "Alessandro Bramucci's resume"
-author: Lijia Yu
+author: Alessandro Bramucci
 date: "r format(Sys.time(), '%d %b %Y')`"
 output:
   pagedown::html_resume:
     css: 
-    - css/override_english.css
-    - resume
+      - css/styles.css
+      - resume
     # set it to true for a self-contained HTML page but it'll take longer to render
-    self_contained: false
+    self_contained: true
 # uncomment this line to produce HTML and PDF in RStudio:
-#knit: pagedown::chrome_print
+knit: pagedown::chrome_print
 ---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+library(tidyverse)
+library(glue)
+source('functions.r') 
+```
 
 Aside
 ================================================================================
@@ -38,17 +48,45 @@ Contact {#contact}
 Language skills {#skills}
 --------------------------------------------------------------------------------
 
-Italian (mother tongue); German (fluent spoken and written); English (fluent spoken and written); Spanish (basic knowledge)
+```{r}
+
+language_skils <- tribble(
+  ~skill,               ~level,
+  "Italian",              5,
+  "English",              4,
+  "German",               4,
+  "Spanish",              1.5, 
+)
+
+build_skill_bars(skills = language_skils)
+
+```
 
 Computer skills
 --------------------------------------------------------------------------------
 
-R, RStudio, Git, GitHub, Latex, Excel, Word, PowerPoint, Stata, SQL
+```{r}
+
+skills_data <- tribble(
+  ~skill,               ~level,
+  "R/RStudio",          4.5,
+  "Excel",              3.5,
+  "Git/GitHub",         3,
+  "Stata",              2, 
+  "SQL",                1
+)
+
+build_skill_bars(skills = skills_data)
+```
 
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Last updated `r format(Sys.time(), '%d %m %Y')`. Created with [pagedown](https://github.com/rstudio/pagedown).
+Made with [pagedown](https://github.com/rstudio/pagedown). 
+
+Source code: [github.com/nstrayer/cv](https://github.com/Alessandro1984/cv).
+
+Last updated on `r format(Sys.time(), '%d %m %Y')`.
 
 Main
 ================================================================================
@@ -90,7 +128,7 @@ Berlin School of Economics and Law (HWR)
 
 Berlin
 
-October 2017 - May 2019
+October 2017 - April 2019
 
 ---
 
@@ -117,8 +155,12 @@ Berlin
 
 ---
 
-- Introductory courses in economics (Macroeconomics, International Economics)
-- Introduction to quantitative methods (with focus on econometrics)
+- Business Economics (WS 2017-18)
+- Economics Tutorium (WS 2016-17), as Tutor
+- International Economics (SS 2016, SS 2018)
+- Macroeconomics: The Economic Cycle and Employment (SS 2016, WS 2016-17, SS 2017, SS 2018, WS 2018-19, SS 2019)
+- Quantitative Methods for Economists (WS 2017-18, WS 2018-19, WS 2019-20, WS 2020-21, WS 2021-22)
+- Research Methods Seminar (WS 2019-20)
 
 Education {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
@@ -188,10 +230,38 @@ Berlin
 
 - Introduction to Programming in R
 
-Hobbys {data-icon="fas fa-dumbbell"}
+Selected publications {data-icon=newspaper}
 --------------------------------------------------------------------------------
 
-My hobbies are sports and music especially CrossFit, boxing and playing drums
+### Varieties and interdependencies of demand and growth regimes in finance-dominated capitalism: a Post-Keynesian two-country stock–flow consistent simulation approach
+
+Prante, F., Hein, E. and Bramucci, A.
+
+N/A
+
+2022
+
+*Review of Keynesian Economics*, 10(2), 264–290, [https://doi.org/10.4337/roke.2022.02.07](https://doi.org/10.4337/roke.2022.02.07)
+
+### Pluralist macroeconomics - an interactive simulator
+
+Prante, F., Bramucci, A., Hein, E. and Truger, A.
+
+N/A
+
+2020
+
+*International Journal of Pluralism and Economics Education*, 11(1), 55-78, [https://www.doi.org/10.1504/IJPEE.2020.109496]( https://www.doi.org/10.1504/IJPEE.2020.109496)
+
+### Decades of tight fiscal policy have left the health care system in Italy ill-prepared to fight the COVID-19 outbreak
+
+Prante, F., Bramucci, A. and Truger, A.
+
+N/A
+
+2020
+
+*Intereconomics*, 55, 147–152, [https://doi.org/10.1007/s10272-020-0886-0]( https://doi.org/10.1007/s10272-020-0886-0)
 
 ```{js move_disclaim, echo=FALSE}
 (function() {
