@@ -106,7 +106,7 @@ Oktober 2019 - August 2022
 
 ---
 
-Mitarbeiter im Projekt [„WIPOSIM - Der wirtschaftspolitische Online-Simulator“](https://www.wiposim.de/)
+Mitarbeiter im Projekt [„WIPOSIM - Der wirtschaftspolitische Online-Simulator“](https://www.alessandrobramucci.com/project/wiposim/)
 
 ::: concise
 - Programmierung von Simulationen in R 
@@ -127,7 +127,7 @@ Oktober 2017 - April 2019
 
 ---
 
-Mitarbeiter im Projekt [„Modelltheoretische Grundlagen wirtschaftspolitischer Kontroversen“ (MGWK)](https://projekt.mgwk.de/index.html)
+Mitarbeiter im Projekt [„Modelltheoretische Grundlagen wirtschaftspolitischer Kontroversen“ (MGWK)](https://www.alessandrobramucci.com/project/mgwk/)
 
 ::: concise
 - Programmierung von Simulationen in R 
