@@ -114,7 +114,7 @@ Mitarbeiter im Projekt [„WIPOSIM - Der wirtschaftspolitische Online-Simulator�
 - Konzeption und Verfassung von Fachtexten insbesondere zum Thema der Fiskalpolitk
 - Umfangreiche Erfahrung in der Datenarbeit anhand der *tidyverse* R-Pakete
 - Veröffentlichung wissenschaftlichen Artikeln in akademischen Fachzeitschriften
-- Antragstellung, Einwerbung von Drittmitteln
+- Einwerbung von Drittmitteln
 :::
 
 ### wissenschaftlicher Mitarbeiter
