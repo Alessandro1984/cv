@@ -13,6 +13,15 @@ output:
 knit: pagedown::chrome_print
 ---
 
+```{css, echo=FALSE}
+.pagedjs_page:not(:first-of-type) {
+  --sidebar-width: 0rem;
+  --sidebar-background-color: #ffffff;
+  --main-width: calc(var(--content-width) - var(--sidebar-width));
+  --decorator-horizontal-margin: 0.2in;
+}
+```
+
 ```{r, include=FALSE}
 knitr::opts_chunk$set(
   results='asis', 
@@ -73,11 +82,12 @@ build_skill_bars(skills = skills_data)
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Erstellt mit [pagedown](https://github.com/rstudio/pagedown).
-
-Quellcode: [github.com/Alessandro1984/cv](https://github.com/Alessandro1984/cv).
-
+<small>
+Erstellt mit [pagedown](https://github.com/rstudio/pagedown).   
+Quellcode:    
+[github.com/Alessandro1984/cv](https://github.com/Alessandro1984/cv).    
 Letzte Aktualisierung `r format(Sys.time(), '%d %m %Y')`. 
+</small>
 
 Main
 ================================================================================
@@ -106,13 +116,13 @@ Oktober 2019 - August 2022
 
 ---
 
-Mitarbeiter im Projekt [„WIPOSIM - Der wirtschaftspolitische Online-Simulator“](https://www.alessandrobramucci.com/project/wiposim/)
+Projekt [„WIPOSIM - Der wirtschaftspolitische Online-Simulator“](https://www.alessandrobramucci.com/project/wiposim/)
 
 ::: concise
 - Programmierung von Simulationen in R 
 - Entwicklung interaktiver Anwendungen mit dem R-Paket *shiny*
-- Konzeption und Verfassung von Fachtexten insbesondere zum Thema der Fiskalpolitk
-- Umfangreiche Erfahrung in der Datenarbeit anhand der *tidyverse* R-Pakete
+- Verfassung von Fachtexten insbesondere zum Thema der Fiskalpolitk
+- Umfangreiche Erfahrung in der Datenarbeit mit der *tidyverse* R-Pakete
 - Veröffentlichung wissenschaftlichen Artikeln in akademischen Fachzeitschriften
 - Einwerbung von Drittmitteln
 :::
@@ -127,14 +137,14 @@ Oktober 2017 - April 2019
 
 ---
 
-Mitarbeiter im Projekt [„Modelltheoretische Grundlagen wirtschaftspolitischer Kontroversen“ (MGWK)](https://www.alessandrobramucci.com/project/mgwk/)
+Projekt [„Modelltheoretische Grundlagen wirtschaftspolitischer Kontroversen“ (MGWK)](https://www.alessandrobramucci.com/project/mgwk/)
 
 ::: concise
-- Programmierung von Simulationen in R 
-- Entwicklung interaktiver Anwendungen mit dem R-Paket *Shiny*
-- Verfassung ausgewählten Kapitel des Buches 
-- Übersetzung vom Buch und Simulationen vom Deutschen ins Englische
-- Vorstellung der Projektergebnisse auf wissenschaftlichen Tagungen und Konferenzen
+- Programmierung von Simulationen in R    
+- Entwicklung interaktiver Anwendungen mit dem R-Paket *Shiny*    
+- Verfassung ausgewählten Kapitel des Buches    
+- Übersetzung vom Buch und Simulationen vom Deutschen ins Englische   
+- Vorstellung der Projektergebnisse auf wissenschaftlichen Tagungen und Konferenzen   
 :::
 
 Lehrerfahrung {data-icon=chalkboard-teacher}
@@ -150,12 +160,13 @@ Berlin
 
 ---
 
-- Business Economics (WiSe 2017-18) 
-- Economics Tutorium (WiSe 2016-17) 
-- International Economics (SoSe 2016, SoSe 2018) 
-- Macroeconomics: The Economic Cycle and Employment (SoSe 2016, WiSe 2016-17, SoSe 2017, SoSe 2018, WiSe 2018-19, SoSe 2019) 
-- Quantitative Methods for Economists (WiSe 2017-18, WiSe 2018-19, WiSe 2019-20, WiSe 2020-21, WiSe 2021-22) 
-- Research Methods Seminar (WiSe 2019-20) 
+- Business Economics (WiSe 2017-18)     
+- Economics Tutorium (WiSe 2016-17)     
+- International Economics (SoSe 2016, SoSe 2018)    
+- Macroeconomics: The Economic Cycle and Employment (SoSe 2016, WiSe 2016-17, SoSe 2017, SoSe 2018, WiSe 2018-19, SoSe 2019)    
+- Quantitative Methods for Economists (WiSe 2017-18, WiSe 2018-19, WiSe 2019-20, WiSe 2020-21, WiSe 2021-22)    
+- Research Methods Seminar (WiSe 2019-20)     
+
 
 Studium {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
@@ -203,11 +214,9 @@ Berlin
 
 2016 - 2019
 
-**Programmierkurse mit Schwerpunkt R/Rstudio:**   
 - Introduction to Engineering Data Analytics with R (TU Berlin)   
 - Applied Data Science for Quality Engineering (TU Berlin)    
 - Introduction to Programming in R (HWR Berlin)   
-**Weitere Programmierkurse:**   
 - LaTeX: Einführung in das mathematisch wissenschaftliche Textsatzsystem (TU Berlin)
 
 Ausgewählte Publikationen {data-icon=newspaper}
@@ -243,17 +252,31 @@ N/A
 
 *Intereconomics*, 55, 147–152, [https://doi.org/10.1007/s10272-020-0886-0](https://doi.org/10.1007/s10272-020-0886-0)
 
+## Referenzen {data-icon="handshake"}
+
+### Prof. Dr. Eckhard Hein, *Hochschule für Wirtschaft und Recht Berlin*
+
+`eckhard.hein@hwr-berlin.de`
+
+N/A
+
+### Prof. Dr. Achim Truger, *Universität Duisburg-Essen* und Mitglied des *Sachverständigenrates zur Begutachtung der gesamtwirtschaftlichen Entwicklung*
+
+`achim.truger@uni-due.de`
+
+N/A
+
 ```{js move_disclaim, echo=FALSE}
 (function() {
-    var pages 
+    var pages
     var timer = 0;
     var changeDC = setInterval(function() {
         pages = document.querySelectorAll('.pagedjs_page');
-        if(pages.length !== 2 && timer <= 5000) {
+        if(pages.length !== 1 && timer <= 5000) {
             timer += 200;
             return;
         }
-        if(pages.length !== 2 && timer > 5000) return clearInterval(changeDC);
+        if(pages.length !== 1 && timer > 5000) return clearInterval(changeDC);
         var firstPage = pages[0];
         var lastePage = pages[pages.length - 1];
         var aside = firstPage.querySelector('#aside');
