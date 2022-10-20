@@ -116,13 +116,12 @@ Oktober 2019 - August 2022
 
 ---
 
-Projekt [„WIPOSIM - Der wirtschaftspolitische Online-Simulator“](https://www.alessandrobramucci.com/project/wiposim/)
+Projekt [„WIPOSIM - Der wirtschaftspolitische Online-Simulator“](https://www.alessandrobramucci.com/project/wiposim/). Meine Aufgaben umfassten:
 
 ::: concise
-- Programmierung von Simulationen in R 
-- Entwicklung interaktiver Anwendungen mit dem R-Paket *shiny*
+- Programmierung der Simulationen in R und entwicklung der interaktiven Anwendungen mit *shiny*
 - Verfassung von Fachtexten insbesondere zum Thema der Fiskalpolitk
-- Umfangreiche Erfahrung in der Datenarbeit mit der *tidyverse* R-Pakete
+- Datenarbeit mit den Pakete der *R tidyverse* 
 - Veröffentlichung wissenschaftlichen Artikeln in akademischen Fachzeitschriften
 - Einwerbung von Drittmitteln
 :::
@@ -137,12 +136,11 @@ Oktober 2017 - April 2019
 
 ---
 
-Projekt [„Modelltheoretische Grundlagen wirtschaftspolitischer Kontroversen“ (MGWK)](https://www.alessandrobramucci.com/project/mgwk/)
+Projekt [„Modelltheoretische Grundlagen wirtschaftspolitischer Kontroversen“ (MGWK)](https://www.alessandrobramucci.com/project/mgwk/). Meine Aufgaben umfassten:
 
 ::: concise
-- Programmierung von Simulationen in R    
-- Entwicklung interaktiver Anwendungen mit dem R-Paket *Shiny*    
-- Verfassung ausgewählten Kapitel des Buches    
+- Programmierung der Simulationen in R und entwicklung der interaktiven Anwendungen mit *shiny*  
+- Verfassung ausgewählten Kapitel des Online-Buches [*Einführung in die Makroökonomik: plural und interaktiv*](https://www.mgwk.de/)   
 - Übersetzung vom Buch und Simulationen vom Deutschen ins Englische   
 - Vorstellung der Projektergebnisse auf wissenschaftlichen Tagungen und Konferenzen   
 :::
