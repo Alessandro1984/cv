@@ -86,7 +86,7 @@ Disclaimer {#disclaimer}
 Erstellt mit [pagedown](https://github.com/rstudio/pagedown).   
 Quellcode:    
 [github.com/Alessandro1984/cv](https://github.com/Alessandro1984/cv).    
-Letzte Aktualisierung `r format(Sys.time(), '%d %m %Y')`. 
+Letzte Aktualisierung `r format(Sys.time(), '%d.%m.%Y')`. 
 </small>
 
 Main
@@ -162,7 +162,7 @@ Berlin
 - Economics Tutorium (WiSe 2016-17)     
 - International Economics (SoSe 2016, SoSe 2018)    
 - Macroeconomics: The Economic Cycle and Employment (SoSe 2016, WiSe 2016-17, SoSe 2017, SoSe 2018, WiSe 2018-19, SoSe 2019)    
-- Quantitative Methods for Economists (WiSe 2017-18, WiSe 2018-19, WiSe 2019-20, WiSe 2020-21, WiSe 2021-22)    
+- Quantitative Methods for Economists (WiSe 2017-18, WiSe 2018-19, WiSe 2019-20, WiSe 2020-21, WiSe 2021-22, WiSe 2022-23)    
 - Research Methods Seminar (WiSe 2019-20)     
 
 
