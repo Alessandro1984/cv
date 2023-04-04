@@ -70,10 +70,11 @@ IT Kenntnisse
 skills_data <- tribble(
   ~skill,               ~level,
   "R/RStudio",          4.5,
-  "Excel",              3.5,
-  "Git/GitHub",         3,
+  "Git/GitHub",         4,
+  "Python",             3.5,
+  "Excel",              3,
+  "SQL",                3,
   "Stata",              2, 
-  "SQL",                1
 )
 
 build_skill_bars(skills = skills_data)
